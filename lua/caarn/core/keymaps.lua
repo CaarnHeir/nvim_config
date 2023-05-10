@@ -57,4 +57,9 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
-
+-- vim test
+--keymap.set("<silent>", "<leader>t", ":TestNearest<cr>")
+--keymap.set("<silent>", "<leader>T", ":TestFile<cr>")
+--keymap.set("<silent>", "<leader>a", ":TestSuite<cr>")
+--keymap.set("<silent>", "<leader>l", ":TestLast<cr>")
+--keymap.set("<silent>", "<leader>g", ":TestVisit<cr>")

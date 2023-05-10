@@ -4,6 +4,9 @@ if not status then
 	return
 end
 
+local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+ft_to_parser.mdx = "markdown"
+
 -- configure treesitter
 treesitter.setup({
 	-- enable syntax highlighting
@@ -23,7 +26,6 @@ treesitter.setup({
 		"yaml",
 		"html",
 		"css",
-		"markdown",
 		"svelte",
 		"graphql",
 		"bash",
