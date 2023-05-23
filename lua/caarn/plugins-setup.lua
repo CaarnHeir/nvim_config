@@ -72,7 +72,7 @@ return packer.startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-
+	use("junegunn/rainbow_parentheses.vim")
 	-- treesitter configuration
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -89,6 +89,8 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	--TODO comments highlighting
+	use("folke/todo-comments.nvim")
 	-- Testing
 	use("vim-test/vim-test")
 	if packer_bootstrap then

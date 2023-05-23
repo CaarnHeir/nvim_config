@@ -207,6 +207,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\caarn\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rainbow_parentheses.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\caarn\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rainbow_parentheses.vim",
+    url = "https://github.com/junegunn/rainbow_parentheses.vim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "C:\\Users\\caarn\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-fzf-native.nvim",
@@ -221,6 +226,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\caarn\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\caarn\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["typescript.nvim"] = {
     loaded = true,
