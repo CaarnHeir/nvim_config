@@ -7,6 +7,19 @@ return {
 	config = function()
 		require("catppuccin").setup({
 			flavour = "macchiato",
+			integrations = {
+				gitsigns = true,
+				telescope = true,
+				cmp = true,
+				treesitter = true,
+				indent_blankline = {
+					enabled = true,
+				},
+				nvimtree = true,
+				native_lsp = {
+					enabled = true,
+				},
+			},
 		})
 		vim.cmd([[colorscheme catppuccin]])
 	end,
