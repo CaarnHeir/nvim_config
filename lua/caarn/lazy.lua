@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "caarn.plugins" }, { import = "caarn.plugins.lsp" } }, {
 	install = {
-		colorscheme = { "onedark" },
+		colorscheme = { "catppuccin" },
 	},
 	checker = {
 		enabled = true,
