@@ -40,3 +40,9 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- Set highlight on Search
+opt.hlsearch = true
+
+--Decrease update time
+opt.updatetime = 250
