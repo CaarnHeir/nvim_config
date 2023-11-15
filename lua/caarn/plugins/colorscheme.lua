@@ -19,6 +19,7 @@ return {
 				native_lsp = {
 					enabled = true,
 				},
+				bufferline = true,
 			},
 		})
 		vim.cmd([[colorscheme catppuccin]])

@@ -40,15 +40,18 @@ keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
 --Debugger
-vim.api.nvim_set_keymap("n", "<leader>dt", ":DapUiToggle<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>dc", ":DapContinue<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>dr", ":lua require('dapui').open({reset = true})<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>m", ":lua require('harpoon.mark').add_file()<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>ht", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { noremap = true })
+keymap.set("n", "<leader>dt", ":DapUiToggle<CR>", { noremap = true })
+keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true })
+keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true })
+keymap.set("n", "<leader>dr", ":lua require('dapui').open({reset = true})<CR>", { noremap = true })
 
---TODO: use this to fix the debugger commands.
---keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })
+--Harpoon
+keymap.set("n", "<leader>m", ":lua require('harpoon.mark').add_file()<CR>", { noremap = true })
+keymap.set("n", "<leader>ht", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { noremap = true })
+
+--todo comment key maps
+keymap.set("n", "<leader>tl", "<cmd>TodoTelescope<CR>", { desc = "ToDo Telescope" })
+keymap.set("n", "<leader>tt", "<cmd>TodoTrouble<CR>", { desc = "Todo Trouble" })
 
 -- Fterm
 -- vim.api.nvim_set_keymap("n", "<leader>tt", ":lua require('FTerm').toggle()<CR>", {noremap=true})
