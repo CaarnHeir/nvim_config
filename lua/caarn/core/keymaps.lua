@@ -92,3 +92,11 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find s
 
 --Maximizer REFERNCE ONLy
 --<leader>sm
+
+--*******************************************
+--General Keymaps
+--*******************************************
+
+--Moving Lines Up or Down
+keymap.set({ "n", "v" }, "mk", "<cmd>m-2<cr>", { desc = "move line up one" })
+keymap.set({ "n", "v" }, "mj", "<cmd>m+1<cr>", { desc = "move line down one" })
