@@ -37,7 +37,7 @@ keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { 
 keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
-keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
 --Debugger
 keymap.set("n", "<leader>dt", ":DapUiToggle<CR>", { noremap = true })
