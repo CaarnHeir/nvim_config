@@ -42,6 +42,7 @@ return {
 					"dockerfile",
 					"gitignore",
 					"query",
+					"zig",
 				},
 				incremental_selection = {
 					enable = true,
