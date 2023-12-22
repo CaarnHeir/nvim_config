@@ -31,6 +31,20 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+--BufferLine
+keymap.set(
+	"n",
+	"<leader>bl",
+	"<cmd>BufferLineCloseLeft<CR>",
+	{ desc = "Close all buffers to the left of current buffer" }
+)
+keymap.set(
+	"n",
+	"<leader>br",
+	"<cmd>BufferLineCloseRight<CR>",
+	{ desc = "Close all buffers to the right of current buffer" }
+)
+
 --Trouble mappings
 keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
