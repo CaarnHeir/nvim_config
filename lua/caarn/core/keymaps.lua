@@ -1,4 +1,4 @@
--- set leader key to space
+--set leader key to space
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
@@ -54,7 +54,9 @@ keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true
 keymap.set("n", "<leader>gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
 --Debugger
-keymap.set("n", "<leader>dt", ":DapUiToggle<CR>", { noremap = true })
+keymap.set("n", "<leader>dt", function()
+	require("dapui").toggle()
+end, { noremap = true })
 keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true })
 keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true })
 keymap.set("n", "<leader>dr", ":lua require('dapui').open({reset = true})<CR>", { noremap = true })
