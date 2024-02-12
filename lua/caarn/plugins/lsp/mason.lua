@@ -52,6 +52,8 @@ return {
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 				"zls",
+				"cpptools",
+				"codelldb",
 			},
 		})
 	end,

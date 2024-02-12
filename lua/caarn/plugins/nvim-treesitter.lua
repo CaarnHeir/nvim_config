@@ -43,6 +43,7 @@ return {
 					"gitignore",
 					"query",
 					"zig",
+					"rust",
 				},
 				incremental_selection = {
 					enable = true,
