@@ -59,7 +59,11 @@ keymap.set("n", "<leader>dt", function()
 end, { noremap = true })
 keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true })
 keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true })
-keymap.set("n", "<leader>dr", ":lua require('dapui').open({reset = true})<CR>", { noremap = true })
+keymap.set("n", "<leader>df", ":lua require('dapui').open({reset = true})<CR>", { noremap = true })
+keymap.set("n", "<leader>dr", ":RustLsp debuggables<CR>", { noremap = true })
+keymap.set("n", "<leader>do", ":lau require'dap'.step_over()<CR>", { noremap = true })
+keymap.set("n", "<leader>di", ":lau require'dap'.step_into()<CR>", { noremap = true })
+keymap.set("n", "<leader>du", ":lau require'dap'.step_back()<CR>", { noremap = true })
 
 --Harpoon
 keymap.set("n", "<leader>m", ":lua require('harpoon.mark').add_file()<CR>", { noremap = true })
