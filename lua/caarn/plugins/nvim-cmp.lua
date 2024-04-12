@@ -8,6 +8,8 @@ return {
 		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		"rafamadriz/friendly-snippets", -- useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
+		"Saecki/crates.nvim", --crate dependencies
+		"David-Kunz/cmp-npm", --npm dependencies
 	},
 	config = function()
 		local cmp = require("cmp")
