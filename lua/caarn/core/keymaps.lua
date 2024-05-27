@@ -78,7 +78,7 @@ keymap.set(
 )
 
 --todo comment key maps
-keymap.set("n", "<leader>tl", "<cmd>TodoTelescope<CR>", { desc = "ToDo Telescope" })
+keymap.set("n", "<leader>tl", "<cmd>TodoTelescope<CR>", { desc = "Todo Telescope" })
 keymap.set("n", "<leader>tt", "<cmd>TodoTrouble<CR>", { desc = "Todo Trouble" })
 
 -- Fterm
