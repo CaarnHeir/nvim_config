@@ -16,6 +16,15 @@ return {
 
 		local dap = require("dap")
 
+		dap.adapters.netcoredbg = {
+			type = "executable",
+			command = vim.fn.exepath("netcoredbg"),
+			args = { "--interpreter=vscode" },
+			options = {
+				detached = false,
+			},
+		}
+
 		-- Adapters
 		-- C, C++, Rust
 		dap.adapters.codelldb = {
@@ -53,15 +62,15 @@ return {
 		-- Usually prefer setting up via launch.json
 		dap.configurations.cs = {
 			{
-				type = "coreclr",
-				name = "launch - netcoredbg",
+				type = "netcoredbg",
+				name = "Launch file",
 				request = "launch",
 				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/", "file")
 				end,
+				cwd = "${workspaceFolder}",
 			},
 		}
-		-- Godot
 		dap.configurations.gdscript = {
 			{
 				type = "godot",

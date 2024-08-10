@@ -1,27 +1,59 @@
 return {
-	"catppuccin/nvim",
-	name = "catppuccin",
-	-- "navarasu/onedark.nvim",
-	-- name = "onedark",
-	priority = 1000,
+	-- "catppuccin/nvim",
+	-- name = "catppuccin",
+	-- -- "navarasu/onedark.nvim",
+	-- -- name = "onedark",
+	-- priority = 1000,
+	-- config = function()
+	-- 	require("catppuccin").setup({
+	-- 		flavour = "macchiato",
+	-- 		integrations = {
+	-- 			gitsigns = true,
+	-- 			telescope = true,
+	-- 			cmp = true,
+	-- 			treesitter = true,
+	-- 			indent_blankline = {
+	-- 				enabled = true,
+	-- 			},
+	-- 			nvimtree = true,
+	-- 			native_lsp = {
+	-- 				enabled = true,
+	-- 			},
+	-- 			bufferline = true,
+	-- 		},
+	-- 	})
+	-- 	vim.cmd([[colorscheme catppuccin]])
+	-- end,
+	-- Default options:
+	"rebelot/kanagawa.nvim",
+	name = "kanagawa",
 	config = function()
-		require("catppuccin").setup({
-			flavour = "macchiato",
-			integrations = {
-				gitsigns = true,
-				telescope = true,
-				cmp = true,
-				treesitter = true,
-				indent_blankline = {
-					enabled = true,
-				},
-				nvimtree = true,
-				native_lsp = {
-					enabled = true,
-				},
-				bufferline = true,
+		require("kanagawa").setup({
+			compile = false, -- enable compiling the colorscheme
+			undercurl = true, -- enable undercurls
+			commentStyle = { italic = true },
+			functionStyle = {},
+			keywordStyle = { italic = true },
+			statementStyle = { bold = true },
+			typeStyle = {},
+			transparent = false, -- do not set background color
+			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+			terminalColors = true, -- define vim.g.terminal_color_{0,17}
+			colors = { -- add/modify theme and palette colors
+				palette = {},
+				theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+			},
+			overrides = function(colors) -- add/modify highlights
+				return {}
+			end,
+			theme = "wave", -- Load "wave" theme when 'background' option is not set
+			background = { -- map the value of 'background' option to a theme
+				dark = "wave", -- try "dragon" !
+				light = "lotus",
 			},
 		})
-		vim.cmd([[colorscheme catppuccin]])
+
+		-- setup must be called before loading
+		vim.cmd("colorscheme kanagawa")
 	end,
 }
