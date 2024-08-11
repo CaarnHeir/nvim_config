@@ -133,3 +133,6 @@ keymap.set({ "n", "v" }, "mj", "<cmd>m+1<cr>", { desc = "move line down one" })
 
 --OIL keymaps
 keymap.set({ "n" }, "-", "<cmd>Oil --float<CR>", { desc = "Open parent directory" })
+
+--NoNeckPain
+keymap.set("n", "<leader>nn", "<cmd>NoNeckPain<CR>", { desc = "No Neck Pain Toggle" })
