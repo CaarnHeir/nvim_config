@@ -136,3 +136,9 @@ keymap.set({ "n" }, "-", "<cmd>Oil --float<CR>", { desc = "Open parent directory
 
 --NoNeckPain
 keymap.set("n", "<leader>nn", "<cmd>NoNeckPain<CR>", { desc = "No Neck Pain Toggle" })
+
+--Navigator
+keymap.set({"n","t"}, "<A-h>", "<cmd>NavigatorLeft<CR>")
+keymap.set({"n","t"}, "<A-l>", "<cmd>NavigatorRight<CR>")
+keymap.set({"n","t"}, "<A-j>", "<cmd>NavigatorDown<CR>")
+keymap.set({"n","t"}, "<A-k>", "<cmd>NavigatorUp<CR>")
