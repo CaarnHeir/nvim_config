@@ -86,11 +86,20 @@ return {
 		})
 
 		-- configure typescript server with plugin
-		lspconfig["tsserver"].setup({
+		lspconfig["ts_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
+		-- lspconfig["csharp-ls"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- })
+		--
+		lspconfig["gopls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 		-- configure css server
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,
@@ -140,12 +149,12 @@ return {
 			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 		})
 
-		-- configure zig language server
-		lspconfig["zls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "zig" },
-		})
+		-- -- configure zig language server
+		-- lspconfig["zls"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- 	filetypes = { "zig" },
+		-- })
 
 		-- configure python server
 		lspconfig["pyright"].setup({
