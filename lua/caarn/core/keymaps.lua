@@ -3,8 +3,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 local keymap = vim.keymap -- for conciseness
 
----------------------
--- General Keymaps -------------------
+
+------------- General Keymaps -------------------
 
 -- use jk to exit insert mode
 keymap.set("i", "kj", "<ESC>", { desc = "Exit insert mode with jk" })
@@ -20,52 +20,52 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window management
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
-keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })                   -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })                 -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })                    -- make split windows equal width & height
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })               -- close current split window
 
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })                     -- open new tab
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })              -- close current tab
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })                     --  go to next tab
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })                 --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 --BufferLine
 keymap.set(
-	"n",
-	"<leader>bl",
-	"<cmd>BufferLineCloseLeft<CR>",
-	{ desc = "Close all buffers to the left of current buffer" }
+  "n",
+  "<leader>bl",
+  "<cmd>BufferLineCloseLeft<CR>",
+  { desc = "Close all buffers to the left of current buffer" }
 )
 keymap.set(
-	"n",
-	"<leader>br",
-	"<cmd>BufferLineCloseRight<CR>",
-	{ desc = "Close all buffers to the right of current buffer" }
+  "n",
+  "<leader>br",
+  "<cmd>BufferLineCloseRight<CR>",
+  { desc = "Close all buffers to the right of current buffer" }
 )
 
 --Trouble mappings
 keymap.set(
-	"n",
-	"<leader>tr",
-	"<cmd>Trouble diagnostics toggle filter.buf=0 win.position=right win.size.width=.4<cr>",
-	{ silent = true, noremap = true }
+  "n",
+  "<leader>tr",
+  "<cmd>Trouble diagnostics toggle filter.buf=0 win.position=right win.size.width=.4<cr>",
+  { silent = true, noremap = true }
 )
 -- keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
 -- keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
 keymap.set(
-	"n",
-	"<leader>tl",
-	"<cmd>Trouble lsp toggle focus=false win.position=right win.size.width=.4<cr>",
-	{ silent = true, noremap = true }
+  "n",
+  "<leader>tl",
+  "<cmd>Trouble lsp toggle focus=false win.position=right win.size.width=.4<cr>",
+  { silent = true, noremap = true }
 )
 -- keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
 -- keymap.set("n", "<leader>tr", "<cmd>TroubleToggle lsp_referencesfffffff<cr>", { silent = true, noremap = true })
 
 --Debugger
 keymap.set("n", "<leader>dt", function()
-	require("dapui").toggle()
+  require("dapui").toggle()
 end, { noremap = true })
 keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true })
 keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true })
@@ -81,10 +81,10 @@ keymap.set("n", "<leader>hm", "<cmd>lua require('harpoon.mark').add_file()<cr>",
 keymap.set("n", "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", { desc = "Go to next harpoon mark" })
 keymap.set("n", "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", { desc = "Go to previous harpoon mark" })
 keymap.set(
-	"n",
-	"<leader>ht",
-	"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
-	{ desc = "Toggle the Harpoon Menu" }
+  "n",
+  "<leader>ht",
+  "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
+  { desc = "Toggle the Harpoon Menu" }
 )
 
 --todo comment key maps
@@ -96,7 +96,7 @@ keymap.set("n", "<leader>tt", "<cmd>TodoTrouble<CR>", { desc = "Todo Trouble" })
 -- vim.api.nvim_set_keymap("t", "<leader>tt", '<C-\\><C-n>:lua require("FTerm").toggle()<CR>', {noremap=true})
 
 --Autosession
-keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })             -- restore last workspace session for current directory
 keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
 
 --Formatting REFERENCE ONLY
@@ -106,10 +106,10 @@ keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for
 --<leader>l
 
 --NvimTree
-keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })                          -- toggle file explorer
 keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
-keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
-keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })                     -- collapse file explorer
+keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })                       -- refresh file explorer
 
 --Telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
@@ -144,7 +144,7 @@ keymap.set({ "n", "t" }, "<A-j>", "<cmd>NavigatorDown<CR>")
 keymap.set({ "n", "t" }, "<A-k>", "<cmd>NavigatorUp<CR>")
 
 
---XCODE KEYMAPS 
+--XCODE KEYMAPS
 keymap.set("n", "<leader>X", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
 keymap.set("n", "<leader>xf", "<cmd>XcodebuildProjectManager<cr>", { desc = "Show Project Manager Actions" })
 
