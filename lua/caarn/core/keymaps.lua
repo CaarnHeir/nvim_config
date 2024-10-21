@@ -4,7 +4,7 @@ vim.g.maplocalleader = ","
 local keymap = vim.keymap -- for conciseness
 
 
-------------- General Keymaps -------------------
+--------------- General Keymaps ---------------------
 
 -- use jk to exit insert mode
 keymap.set("i", "kj", "<ESC>", { desc = "Exit insert mode with jk" })
