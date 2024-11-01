@@ -1,7 +1,9 @@
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  event = "VeryLazy",
+  keys = {
+  {"<leader>e", "<cmd>NvimTreeToggle<CR>",  desc = "Toggle file explorer" }
+  },
   config = function()
     local nvimtree = require("nvim-tree")
 
@@ -19,7 +21,7 @@ return {
         width = 35,
         relativenumber = true,
       },
-      -- change folder arrow icons
+     -- change folder arrow icons
       renderer = {
         indent_markers = {
           enable = true,

@@ -1,5 +1,6 @@
 return {
 	"rmagatti/goto-preview",
+  lazy = true,
 	config = function()
 		require("goto-preview").setup({
 			width = 120, -- Width of the floating window

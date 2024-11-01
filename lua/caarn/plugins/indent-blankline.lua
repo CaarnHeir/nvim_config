@@ -2,7 +2,8 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		-- "HiPhish/rainbow-delimiters.nvim",
-		event = "BufEnter",
+    --event = "BufEnter",
+    lazy = true,
 		main = "ibl",
 		opts = {},
 		config = function()

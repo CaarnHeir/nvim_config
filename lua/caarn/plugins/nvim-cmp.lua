@@ -8,7 +8,7 @@ return {
 		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		"rafamadriz/friendly-snippets", -- useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
-		"Saecki/crates.nvim", --crate dependencies
+		--"Saecki/crates.nvim", --crate dependencies
 		"David-Kunz/cmp-npm", --npm dependencies
 	},
 	config = function()
@@ -31,8 +31,9 @@ return {
 				end,
 			},
 			experimental = {
-				ghost_text = true,
+				ghost_text = false,
 			},
+
 			mapping = cmp.mapping.preset.insert({
 				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion

@@ -1,5 +1,6 @@
 return {
 	"shortcuts/no-neck-pain.nvim",
+  lazy = true,
 	config = function()
 		require("no-neck-pain").setup({
 			buffers = {
